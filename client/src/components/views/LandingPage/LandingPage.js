@@ -5,7 +5,19 @@ function LandingPage() {
   useEffect(() => {
     axios.get('/api/hello').then((response) => console.log(response.data));
   }, []);
-  return <div>LandingPage</div>;
+  return (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        with: '100%',
+        height: '100vh',
+      }}
+    >
+      시작페이지
+    </div>
+  );
 }
 
 export default LandingPage;
