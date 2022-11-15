@@ -1,5 +1,10 @@
-import React from 'react';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+
+  //Link
+} from 'react-router-dom';
 
 import LandingPage from './components/views/LandingPage/LandingPage';
 import LoginPage from './components/views/LoginPage/LoginPage';
@@ -18,5 +23,4 @@ function App() {
     </BrowserRouter>
   );
 }
-
 export default App;
