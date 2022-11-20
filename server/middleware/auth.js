@@ -12,7 +12,7 @@ let auth = (req, res, next) => {
     if (!user) return res.json({ isAuth: false, error: true });
     req.token = token;
     req.user = user;
-    next();
+    next(); // 얘를 왜 쓰는지 역할이 뭔지 알겠는데 원리를 모르겠다...
   });
   // 유저가 있으면 인증 성공 없으면 인증 실패
 };

@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Auth from '../../../hoc/auth';
 
 function LandingPage() {
   const navigate = useNavigate();
+
+  // 로그인이 되어있으면 true 아니면 false
+  const [loginOrLogout, setloginOrLogout] = useState(false);
 
   useEffect(() => {
     axios.get('/api/hello').then((response) => console.log(response.data));
