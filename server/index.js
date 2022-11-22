@@ -31,11 +31,9 @@ mongoose
   .catch((err) => console.log(err));
 
 // '/'에 접속하면 클라이언트에게 'Hello World!~~'를 보내줘
-app.get('/', (req, res) => res.send('Hello World!~~'));
+app.get('/api', (req, res) => res.send('Hello World!~~'));
 
-app.get('/api/hello', (req, res) => {
-  res.send('hihi!!');
-});
+app.get('/api/hello', (req, res) => res.send('hihi!!'));
 
 // '/api/users/register에서 뭔가를 보내면 받아줘 form이나 ajax
 app.post('/api/users/register', (req, res) => {

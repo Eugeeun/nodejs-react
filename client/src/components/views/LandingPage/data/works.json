@@ -1,0 +1,112 @@
+{
+  "works": [
+    {
+      "a": {
+        "href": "https://eugeeun.github.io/nico_cloneCoding_chrome/",
+        "className": "project",
+        "target": "blank",
+        "dataType": "front-end"
+      },
+      "img": {
+        "src": "imgs/projects/todolist.jpg",
+        "alt": "project",
+        "className": "project__img"
+      },
+      "div": {
+        "className": "project__description",
+        "title": "Todo-List",
+        "used": "HTML, CSS, JavaScript"
+      }
+    },
+    {
+      "a": {
+        "href": "https://eugeeun.github.io/HTML-CSS-Drill/",
+        "className": "project",
+        "target": "blank",
+        "dataType": "front-end"
+      },
+      "img": {
+        "src": "imgs/projects/shopping.jpg",
+        "alt": "project",
+        "className": "project__img"
+      },
+      "div": {
+        "className": "project__description",
+        "title": "Todo-List",
+        "used": "HTML, CSS, JavaScript"
+      }
+    },
+    {
+      "a": {
+        "href": "https://eugeeun.github.io/Youtube-clone-coding/",
+        "className": "project",
+        "target": "blank",
+        "dataType": "mobile"
+      },
+      "img": {
+        "src": "imgs/projects/youtubeclonecoding.jpg",
+        "alt": "project",
+        "className": "project__img"
+      },
+      "div": {
+        "className": "project__description",
+        "title": "Youtube clone coding",
+        "used": "HTML, CSS, JavaScript"
+      }
+    },
+    {
+      "a": {
+        "href": "https://codesandbox.io/s/todolist-spvdgq",
+        "className": "project",
+        "target": "blank",
+        "dataType": "front-end"
+      },
+      "img": {
+        "src": "imgs/projects/todolist2.jpg",
+        "alt": "project",
+        "className": "project__img"
+      },
+      "div": {
+        "className": "project__description",
+        "title": "Todo-List 2",
+        "used": "HTML, CSS, JavaScript"
+      }
+    },
+    {
+      "a": {
+        "href": "https://codesandbox.io/s/calc-date-real-time-fmqgwz",
+        "className": "project",
+        "target": "blank",
+        "dataType": "front-end"
+      },
+      "img": {
+        "src": "imgs/projects/datecalculator.jpg",
+        "alt": "project",
+        "className": "project__img"
+      },
+      "div": {
+        "className": "project__description",
+        "title": "Date-Calculator",
+        "used": "HTML, CSS, JavaScript"
+      }
+    },
+    {
+      "a": {
+        "href": "https://codesandbox.io/s/number-baseball-game-ft4uk7",
+        "className": "project",
+        "target": "blank",
+        "dataType": "front-end"
+      },
+      "img": {
+        "src": "imgs/projects/numberbaseball.jpg",
+        "alt": "project",
+        "className": "project__img"
+      },
+      "div": {
+        "className": "project__description",
+        "title": "Baseball of Number Game",
+        "used": "HTML, CSS, JavaScript"
+      }
+    }
+  ]
+}

@@ -27,8 +27,12 @@ function LoginPage() {
       password: Password,
     };
 
+    // 자 이제 뭔가 액션을 할 건데
+    // 액션은 로그인이야 바디 오브젝트를 가지고 loginUser 함수를 실행해줘
     dispatch(loginUser(body)).then((response) => {
+      // 성공하면
       if (response.payload.loginSuccess) {
+        // 시작페이지로 이동시켜줘
         navigate('/');
       }
     });
