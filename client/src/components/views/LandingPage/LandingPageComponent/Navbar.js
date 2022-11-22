@@ -21,6 +21,8 @@ function Navbar() {
     }, 1000);
   }, []);
 
+  const links = ['home', 'about', 'skills', 'work', 'contact'];
+
   return (
     <nav id="navbar">
       <div className="navbar__logo">
@@ -28,21 +30,11 @@ function Navbar() {
         <a href="#">What JongWon's Work!</a>
       </div>
       <ul className="navbar__menu">
-        <li className="navbar__menu__item active" data-link="#home">
-          Home
-        </li>
-        <li className="navbar__menu__item" data-link="#about">
-          About
-        </li>
-        <li className="navbar__menu__item" data-link="#skills">
-          Skills
-        </li>
-        <li className="navbar__menu__item" data-link="#work">
-          My Work
-        </li>
-        <li className="navbar__menu__item" data-link="#contact">
-          Contact
-        </li>
+        {links.map((link, index) => (
+          <li className="navbar__menu__item" data-link={`#${link}`} key={index}>
+            {link}
+          </li>
+        ))}
       </ul>
 
       <button className="navbar__toggle-btn">

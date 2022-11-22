@@ -1,0 +1,93 @@
+{
+  "infos": [
+    {
+      "imgAndDesc": {
+        "icon": "faAddressCard",
+        "className": "fa-solid fa-address-card"
+      },
+      "desc": {
+        "title": "이름",
+        "detail": "고종원"
+      }
+    },
+    {
+      "imgAndDesc": {
+        "icon": "faCalendar",
+        "className": "fa-solid fa-calendar"
+      },
+      "desc": {
+        "title": "생년월일",
+        "detail": "1999.11.22"
+      }
+    },
+    {
+      "imgAndDesc": {
+        "icon": "faLocationDot",
+        "className": "fa-solid fa-location-dot"
+      },
+      "desc": {
+        "title": "주소",
+        "detail": "전라북도 전주시 완산구"
+      }
+    },
+    {
+      "imgAndDesc": {
+        "icon": "faPhone",
+        "className": "fa-solid fa-phone"
+      },
+      "desc": {
+        "title": "연락처",
+        "detail": "010-9447-1363"
+      }
+    },
+    {
+      "imgAndDesc": {
+        "icon": "faPalette",
+        "className": "fa-solid fa-palette"
+      },
+      "desc": {
+        "title": "성향",
+        "detail": "ENFJ / 4W5"
+      }
+    },
+    {
+      "imgAndDesc": {
+        "icon": "faSchool",
+        "className": "fa-solid fa-school"
+      },
+      "desc": {
+        "title": "학력",
+        "detail": "군산대학교 컴퓨터정보공학"
+      }
+    }
+  ],
+  "majors": [
+    {
+      "iconClassName": "fa-brands fa-js-square",
+      "majorTitle": "JavaScript",
+      "majorDesc": "Front-end"
+    },
+    {
+      "iconClassName": "fa-brands fa-react",
+      "majorTitle": "React.js",
+      "majorDesc": "Front-end"
+    },
+    {
+      "iconClassName": "fa-brands fa-node-js",
+      "majorTitle": "Node.js",
+      "majorDesc": "Back-end"
+    }
+  ],
+  "upnext": [
+    {
+      "imgSrc": "imgs/icons/typescript.png",
+      "upnextName": "TypeScript",
+      "upnextCategory": "Front-end"
+    },
+    {
+      "imgSrc": "imgs/icons/mongoDB.png",
+      "upnextName": "MongoDB",
+      "upnextCategory": "Back-end"
+    }
+  ]
+}
