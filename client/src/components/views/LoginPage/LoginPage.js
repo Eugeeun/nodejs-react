@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { loginUser } from '../../../_actions/user_action';
 import { useNavigate } from 'react-router-dom';
 import Auth from '../../../hoc/auth';
+import './css/loginPage.css';
 
 function LoginPage() {
   const dispatch = useDispatch();
@@ -38,27 +39,36 @@ function LoginPage() {
     });
   };
 
+  const toRegistePage = () => {
+    navigate('/register');
+  };
+
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        with: '100%',
-        height: '100vh',
-      }}
-    >
-      <form
-        style={{ display: 'flex', flexDirection: 'column' }}
-        onSubmit={onSubmitHandler}
-      >
-        <label>Email</label>
-        <input type="email" value={Email} onChange={onEmailHandler} />
-        <label>Password</label>
-        <input type="password" value={Password} onChange={onPasswordHandler} />
-        <br />
-        <button type="submit">Login</button>
-      </form>
+    <div className="loginPage">
+      <div className="loginBox">
+        <h2>Login</h2>
+        <form className="loginForm" onSubmit={onSubmitHandler}>
+          <div className="inputBox">
+            <span>Email</span>
+            <input type="email" value={Email} onChange={onEmailHandler} />
+          </div>
+          <div className="inputBox">
+            <span>Password</span>
+            <input
+              type="password"
+              value={Password}
+              onChange={onPasswordHandler}
+            />
+          </div>
+          <br />
+          <button type="submit" className="loginBtn">
+            Login
+          </button>
+        </form>
+        <button className="registerBtn" onClick={toRegistePage}>
+          Register
+        </button>
+      </div>
     </div>
   );
 }

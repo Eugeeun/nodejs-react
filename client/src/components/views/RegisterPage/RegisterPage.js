@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { registerUser } from '../../../_actions/user_action';
 import { useNavigate } from 'react-router-dom';
 import Auth from '../../../hoc/auth';
+import './css/registerPage.css';
 
 function RegisterPage(props) {
   const dispatch = useDispatch();
@@ -49,34 +50,40 @@ function RegisterPage(props) {
   };
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        with: '100%',
-        height: '100vh',
-      }}
-    >
-      <form
-        style={{ display: 'flex', flexDirection: 'column' }}
-        onSubmit={onSubmitHandler}
-      >
-        <label>Email</label>
-        <input type="email" value={Email} onChange={onEmailHandler} />
-        <label>Name</label>
-        <input type="text" value={Name} onChange={onNamedHandler} />
-        <label>Password</label>
-        <input type="password" value={Password} onChange={onPasswordHandler} />
-        <label>Confirm Password</label>
-        <input
-          type="password"
-          value={ConfirmPassword}
-          onChange={onConfirmPasswordHandler}
-        />
-        <br />
-        <button type="submit">회원가입</button>
-      </form>
+    <div className="registerPage">
+      <div className="registerBox">
+        <h2>Register</h2>
+        <form className="registerForm" onSubmit={onSubmitHandler}>
+          <div className="inputBox">
+            <span>Email</span>
+            <input type="email" value={Email} onChange={onEmailHandler} />
+          </div>
+          <div className="inputBox">
+            <span>Name</span>
+            <input type="text" value={Name} onChange={onNamedHandler} />
+          </div>
+          <div className="inputBox">
+            <span>Password</span>
+            <input
+              type="password"
+              value={Password}
+              onChange={onPasswordHandler}
+            />
+          </div>
+          <div className="inputBox">
+            <span>Password</span>
+            <input
+              type="password"
+              value={ConfirmPassword}
+              placeholder="Input your password again"
+              onChange={onConfirmPasswordHandler}
+            />
+          </div>
+          <button className="registerPage__Btn" type="submit">
+            Register
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

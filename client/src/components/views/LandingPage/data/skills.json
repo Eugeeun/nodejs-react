@@ -1,0 +1,83 @@
+{
+  "skills": [
+    {
+      "skillName": "HTML",
+      "iconName": "faHtml5",
+      "class": "fab fa-html5",
+      "width": "95%"
+    },
+    {
+      "skillName": "CSS",
+      "iconName": "faCss3Alt",
+      "class": "fa-brands fa-css3-alt",
+      "width": "90%"
+    },
+    {
+      "skillName": "JavaScript",
+      "iconName": "faJsSquare",
+      "class": "fa-brands fa-js-square",
+      "width": "85%"
+    },
+    {
+      "skillName": "C/C++",
+      "iconName": "faC",
+      "class": "fa-solid fa-c",
+      "width": "80%"
+    },
+    {
+      "skillName": "Python",
+      "iconName": "faPython",
+      "class": "fa-brands fa-python",
+      "width": "60%"
+    },
+    {
+      "skillName": "Java",
+      "iconName": "faJava",
+      "class": "fa-brands fa-java",
+      "width": "40%"
+    },
+    {
+      "skillName": "React.js",
+      "iconName": "faReact",
+      "class": "fa-brands fa-react",
+      "width": "45%"
+    },
+    {
+      "skillName": "Node.js",
+      "iconName": "faNodeJs",
+      "class": "fa-brands fa-node-js",
+      "width": "50%"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Visual Studio"
+    },
+    {
+      "name": "Visual Studio Code"
+    },
+    {
+      "name": "Eclipse"
+    },
+    {
+      "name": "SourceTree"
+    },
+    {
+      "name": "Git"
+    },
+    {
+      "name": "Github"
+    },
+    {
+      "name": "PowerPoint"
+    }
+  ],
+  "DB": [
+    {
+      "name": "MySQL"
+    },
+    {
+      "name": "MongoDB"
+    }
+  ]
+}

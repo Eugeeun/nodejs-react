@@ -44,7 +44,7 @@
   --size-border-radius: 4px;
 
   /* Animation */
-  --animaiton-duration: 300ms;
+  --animaiton-duration: 200ms;
 }
 
 /* clock-digital-font */
@@ -65,6 +65,10 @@ body {
   font-family: 'Oswald', sans-serif;
   margin: 0;
   cursor: default;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 a {
@@ -199,7 +203,11 @@ h3 {
 #home .home__container .profileAndGreeting .imgAndBtn .home__contact {
   position: absolute;
   top: 160px;
-  left: 35px;
+  left: 50px;
+}
+
+#home .home__container .profileAndGreeting .imgAndBtn .home__contact.login {
+  left: 60px;
 }
 
 .home__avartar {
@@ -453,6 +461,9 @@ h3 {
 .skillset__title {
   font-size: var(--font-medium);
   color: var(--color-yellow);
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--color-yellow);
+  text-transform: uppercase;
 }
 
 .skill {
@@ -464,30 +475,54 @@ h3 {
   background-color: var(--color-dark-green);
   padding: 20px 40px;
   border-radius: 10px;
-  border: 2px solid var(--color-yellow);
+  border: 2px solid var(--color-dark-green);
 }
 
 .skill__description {
   display: flex;
   justify-content: space-between;
+  line-height: 12px;
+}
+
+.skill__description .icon {
+  width: 25%;
+  text-align: right;
+}
+
+.skill__description .icon span {
+  margin-right: 10px;
+}
+
+.skill__description .icon .fa-brands,
+.skill__description .icon .fa-solid,
+.skill__description .icon .fab {
+  font-size: calc(var(--font-small) * 1.2);
 }
 
 .skill__bar {
-  width: 100%;
-  height: 11px;
+  width: 65%;
+  height: 20px;
   background-color: var(--color-transparent-black);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .skill__value {
-  height: 10px;
+  height: 19px;
   background-color: var(--color-yellow);
-  border-radius: 10px;
+  border-radius: 5px;
+  border: 3px solid var(--color-orange);
+  transition: all var(--animaiton-duration) ease-in-out;
+}
+
+.skill__value:hover {
+  border: 1px solid var(--color-React);
+  background-color: var(--color-React);
+  transform: scaleY(110%);
 }
 
 .skillset__right {
   flex-basis: 40%;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .tools {
@@ -756,6 +791,12 @@ h3 {
 
   .skillset {
     flex-direction: column;
+  }
+
+  .skill__description .icon .fa-brands,
+  .skill__description .icon .fa-solid,
+  .skill__description .icon .fab {
+    display: none;
   }
 
   .category__btn {

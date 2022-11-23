@@ -21,6 +21,14 @@ function Navbar() {
     }, 1000);
   }, []);
 
+  useEffect(() => {
+    const home = document.querySelector('.navbar__menu__item');
+    home.classList.add('active');
+    // 나중에 로컬 스토리지로 현재 메뉴 상태를 저장해놔서
+    // 페이지가 리프레시되면 그 메뉴를 액티브하게 가져오는 거임!
+    // 데이터셋으로!!
+  }, []);
+
   const links = ['home', 'about', 'skills', 'work', 'contact'];
 
   return (

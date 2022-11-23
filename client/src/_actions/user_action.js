@@ -9,7 +9,7 @@ export function loginUser(dataToSubmit) {
     .then((response) => response.data);
 
   // 오브젝트를 리턴할건데
-  console.log(request);
+  // console.log(request);
   return {
     type: LOGIN_USER, // 로그인 했음을 알려줌
     payload: request, // 로그인 정보를 알려줌
@@ -21,7 +21,7 @@ export function registerUser(dataToSubmit) {
     .post('/api/users/register', dataToSubmit)
     .then((response) => response.data);
 
-  console.log(request);
+  // console.log(request);
   return {
     type: REGISTER_USER,
     payload: request, // success를 줌
@@ -35,7 +35,7 @@ export function auth() {
     // 성공하면 정보를 리턴해줘
     .then((response) => response.data);
 
-  console.log(request);
+  // console.log(request);
   return {
     type: AUTH_USER,
     payload: request, // success를 줌

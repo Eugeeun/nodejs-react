@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import Auth from '../../../hoc/auth';
 
 import './css/style.css';
@@ -16,10 +15,10 @@ import ArrowUp from './LandingPageComponent/ArrowUp';
 function LandingPage() {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    // 이 주소로 가서 뭔가 얻어와라
-    axios.get('/api').then((response) => console.log(response.data));
-  }, []);
+  // useEffect(() => {
+  //   // 이 주소로 가서 뭔가 얻어와라
+  //   axios.get('/api').then((response) => console.log(response.data));
+  // }, []);
 
   useEffect(() => {
     const navbar = document.querySelector('#navbar'); // #navbar선택
@@ -46,7 +45,7 @@ function LandingPage() {
       const link = target.dataset.link; // 타깃의 data-link
       if (!link) return;
       // 링크가 없다면 early return
-      else console.log(event.target.dataset.link); // 그냥 찍어보는 거임
+      // else console.log(event.target.dataset.link); // 그냥 찍어보는 거임
 
       // console.log(target);
       navbarMenu.classList.remove('open'); // .navbar__Menu의 클래스 중에 open을 제거해줘
@@ -60,12 +59,12 @@ function LandingPage() {
       // console.log(navbarMenu.classList);
     });
 
-    // Scrolling to contact when click 'contact me'
-    const contact = document.querySelector('.home__contact'); // .home__contact을 선택
-    contact.addEventListener('click', () => {
-      // 클릭이 되면 이 함수를 실행해줘
-      scrollIntoView('#contact'); // #contact이 있는 html로 이동해줘
-    });
+    // // Scrolling to contact when click 'contact me'
+    // const contact = document.querySelector('.home__contact'); // .home__contact을 선택
+    // contact.addEventListener('click', () => {
+    //   // 클릭이 되면 이 함수를 실행해줘
+    //   scrollIntoView('#contact'); // #contact이 있는 html로 이동해줘
+    // });
 
     // Make home slowly fade to transparent as the window scrolls down
     const home = document.querySelector('.home__container'); // .home__container을 선택
@@ -173,7 +172,7 @@ function LandingPage() {
       const filter =
         event.target.dataset.filter || event.target.parentNode.dataset.filter;
       // 클릭한 곳에 데이터가 들어있으면 그것을 쓰고 없으면 부모노드로 가서 가져옴
-      console.log(filter);
+      // console.log(filter);
 
       if (!filter) return; // filter가 들어있지 않으면 리턴
 
@@ -209,18 +208,6 @@ function LandingPage() {
       // console.log(filter);
     });
   });
-
-  // 버튼이 클릭되면
-  const onClickHandler = () => {
-    // 요 주소로가서 결과를 얻어와
-    axios.get('/api/users/logout').then((response) => {
-      // 결과가 성공이면
-      if (response.data.success) {
-        // 요 주소로 이동해줘
-        navigate('/login');
-      }
-    });
-  };
 
   return (
     <div
