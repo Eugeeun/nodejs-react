@@ -32,7 +32,7 @@
       },
       "div": {
         "className": "project__description",
-        "title": "Todo-List",
+        "title": "Shopping",
         "used": "HTML, CSS, JavaScript"
       }
     },
@@ -106,6 +106,24 @@
         "className": "project__description",
         "title": "Baseball of Number Game",
         "used": "HTML, CSS, JavaScript"
+      }
+    },
+    {
+      "a": {
+        "href": "https://github.com/Eugeeun/nodejs-react",
+        "className": "project",
+        "target": "blank",
+        "dataType": "back-end"
+      },
+      "img": {
+        "src": "imgs/projects/login.jpg",
+        "alt": "project",
+        "className": "project__img"
+      },
+      "div": {
+        "className": "project__description",
+        "title": "Login and Register",
+        "used": "React, Redux, CSS, Express, MongoDB"
       }
     }
   ]
