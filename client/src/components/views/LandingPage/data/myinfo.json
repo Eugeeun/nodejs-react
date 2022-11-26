@@ -1,0 +1,28 @@
+{
+  "contacts": [
+    {
+      "className": "contact__email",
+      "content": "jack603@naver.com"
+    },
+    {
+      "className": "contact__email",
+      "content": "gojongwon8292@gmail.com"
+    },
+    {
+      "className": "contact__tel",
+      "content": "010-9447-1363"
+    }
+  ],
+  "links": [
+    {
+      "link": "https://github.com/Eugeeun",
+      "icon": "faGithubSquare",
+      "className": "fab fa-github-square contact__link"
+    },
+    {
+      "link": "https://www.instagram.com/colored_pencils99.11.22/",
+      "icon": "faInstagram",
+      "className": "fa-brands fa-instagram contact__link"
+    }
+  ]
+}
