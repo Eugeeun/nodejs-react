@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHtml5,
@@ -10,7 +10,7 @@ import {
   faNodeJs,
 } from '@fortawesome/free-brands-svg-icons';
 import { faC } from '@fortawesome/free-solid-svg-icons';
-import mySkill from '../data/skills.json';
+import axios from 'axios';
 
 function Skills() {
   const skillIcons = [
@@ -23,6 +23,17 @@ function Skills() {
     faReact,
     faNodeJs,
   ];
+
+  const [skill, setSkill] = useState([]);
+  const [tool, setTool] = useState([]);
+  const [db, setDb] = useState([]);
+
+  useEffect(() => {
+    axios.get('/api/skill').then((resposne) => setSkill(resposne.data));
+    axios.get('/api/tool').then((resposne) => setTool(resposne.data));
+    axios.get('/api/db').then((resposne) => setDb(resposne.data));
+  }, []);
+
   return (
     <section id="skills" className="section">
       <div className="section__container">
@@ -31,7 +42,7 @@ function Skills() {
         <div className="skillset">
           <div className="skillset__left">
             <h3 className="skillset__title">Skills</h3>
-            {mySkill.skills.map((skill, index) => (
+            {skill.map((skill, index) => (
               <div className="skill" key={index}>
                 <div className="skill__description">
                   <div className="icon">
@@ -57,7 +68,7 @@ function Skills() {
             <div className="tools">
               <h3 className="skillset__title">Tools</h3>
               <ul className="tool__list">
-                {mySkill.tools.map((tool, index) => (
+                {tool.map((tool, index) => (
                   <li key={index}>
                     <span>{tool.name}</span>
                   </li>
@@ -67,7 +78,7 @@ function Skills() {
             <div className="etc">
               <h3 className="skillset__title">DB</h3>
               <ul className="etc">
-                {mySkill.DB.map((etc, index) => (
+                {db.map((etc, index) => (
                   <li key={index}>
                     <span>{etc.name}</span>
                   </li>

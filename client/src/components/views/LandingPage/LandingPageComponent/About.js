@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faJsSquare,
@@ -13,7 +13,7 @@ import {
   faPalette,
   faSchool,
 } from '@fortawesome/free-solid-svg-icons';
-import about from '../data/about.json';
+import axios from 'axios';
 
 function About() {
   const infoIcons = [
@@ -24,6 +24,16 @@ function About() {
     faPalette,
     faSchool,
   ];
+  const [info, setInfo] = useState([]);
+  const [major, setMajor] = useState([]);
+  const [upnext, setUpnext] = useState([]);
+
+  useEffect(() => {
+    // 이 주소로 가서 뭔가 얻어와라
+    axios.get('/api/info').then((response) => setInfo(response.data));
+    axios.get('/api/major').then((response) => setMajor(response.data));
+    axios.get('/api/upnext').then((response) => setUpnext(response.data));
+  }, []);
 
   const brandIcons = [faJsSquare, faReact, faNodeJs];
 
@@ -32,16 +42,16 @@ function About() {
       <h1>About Me</h1>
       <div className="myinfo">
         <ul className="infos">
-          {about.infos.map((info, index) => (
+          {info.map((info, index) => (
             <li key={index}>
               <div className="imgAndDesc">
                 <FontAwesomeIcon
                   icon={infoIcons[index]}
-                  className={info.imgAndDesc.className}
+                  className={info.className}
                 />
                 <div className="desc">
-                  <h2>{info.desc.title}</h2>
-                  <h3>{info.desc.detail}</h3>
+                  <h2>{info.title}</h2>
+                  <h3>{info.detail}</h3>
                 </div>
               </div>
             </li>
@@ -50,7 +60,7 @@ function About() {
       </div>
       <h2 className="majors__title">What I Am Current Doing</h2>
       <div className="about__majors">
-        {about.majors.map((major, index) => (
+        {major.map((major, index) => (
           <div className="major" key={index}>
             <div className="major__icon">
               <FontAwesomeIcon
@@ -65,12 +75,12 @@ function About() {
       </div>
       <div className="about__next">
         <span>Up-next</span>
-        {about.upnext.map((next, index) => (
+        {upnext.map((upnext, index) => (
           <div className="upnext" key={index}>
-            <img src={next.imgSrc} alt="" className="skill_icon" />
+            <img src={upnext.imgSrc} alt="" className="skill_icon" />
             <div className="upnext__description">
-              <p className="upnext__name">{next.upnextName}</p>
-              <p className="upnext__category">{next.upnextCategory}</p>
+              <p className="upnext__name">{upnext.upnextName}</p>
+              <p className="upnext__category">{upnext.upnextCategory}</p>
             </div>
           </div>
         ))}

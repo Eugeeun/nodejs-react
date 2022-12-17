@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Auth from '../../../hoc/auth';
+import axios from 'axios';
 
 import './css/style.css';
 
@@ -14,11 +15,6 @@ import ArrowUp from './LandingPageComponent/ArrowUp';
 
 function LandingPage() {
   const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   // 이 주소로 가서 뭔가 얻어와라
-  //   axios.get('/api').then((response) => console.log(response.data));
-  // }, []);
 
   useEffect(() => {
     const navbar = document.querySelector('#navbar'); // #navbar선택

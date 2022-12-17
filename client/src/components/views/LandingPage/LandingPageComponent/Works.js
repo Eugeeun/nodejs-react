@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import workData from '../data/works.json';
+import axios from 'axios';
 
 function Works() {
   const filters = ['all', 'front-end', 'back-end', 'mobile'];
+  const [work, setWork] = useState([]);
 
   useEffect(() => {
     const allBtn = document.querySelector('.category__btn');
     allBtn.classList.add('selected');
-  });
+
+    axios.get('/api/work').then((response) => setWork(response.data));
+  }, []);
 
   return (
     <section id="work" className="section">
@@ -22,22 +25,22 @@ function Works() {
           ))}
         </div>
         <div className="work__projects">
-          {workData.works.map((data, index) => (
+          {work.map((data, index) => (
             <a
-              href={data.a.href}
-              className={data.a.className}
-              target={data.a.target}
-              data-type={data.a.dataType}
+              href={data.href}
+              className={data.aClassName}
+              target={data.target}
+              data-type={data.dataType}
               key={index}
             >
               <img
-                src={data.img.src}
-                alt={data.img.alt}
-                className={data.img.className}
+                src={data.src}
+                alt={data.alt}
+                className={data.imgClassName}
               />
-              <div className={data.div.className}>
-                <h3>{data.div.title}</h3>
-                <span>{data.div.used}</span>
+              <div className={data.divClassName}>
+                <h3>{data.title}</h3>
+                <span>{data.used}</span>
               </div>
             </a>
           ))}
